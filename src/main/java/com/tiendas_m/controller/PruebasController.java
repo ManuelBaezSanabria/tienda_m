@@ -75,5 +75,17 @@ public class PruebasController {
         return "/pruebas/listado2";
     }
 
-    
+    @PostMapping("/consulta2")
+    public String consulta2(
+            @RequestParam(value = "existenciasMin") int existenciasMin,
+            @RequestParam(value = "existenciasMax") int existenciasMax,
+            Model model) {
+        
+        var productos = productoService.consulta2(existenciasMin, existenciasMax);
+        model.addAttribute("productos", productos);
+        model.addAttribute("existenciasMin", existenciasMin);
+        model.addAttribute("existenciasMax", existenciasMax);
+        
+        return "/pruebas/listado2";
+    }
 }

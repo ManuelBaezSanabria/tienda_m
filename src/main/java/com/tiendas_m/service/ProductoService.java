@@ -28,4 +28,7 @@ public interface ProductoService  {
     
     //Retorna una lista de productos que se encuentra en un rango de precios
     public List<Producto> consulta1(double precioInf, double precioSup);
+    
+    //Retorna una lista de productos que se encuentra en un rango de existencias
+    public List<Producto> consulta2(int exisstenciasMin, int existenciasMax);
 }

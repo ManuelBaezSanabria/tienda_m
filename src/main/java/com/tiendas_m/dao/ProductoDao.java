@@ -16,4 +16,6 @@ public interface ProductoDao extends JpaRepository<Producto,Long>{
     
     public List<Producto> findByPrecioBetweenOrderByDescripcion(double precioInf, double precioSup);
     
+    public List<Producto> findByExistenciasBetweenOrderByDescripcion(int existenciasMin, int existenciasMax);
+    
 }

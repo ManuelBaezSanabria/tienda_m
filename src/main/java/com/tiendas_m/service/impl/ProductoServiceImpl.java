@@ -45,4 +45,10 @@ public class ProductoServiceImpl implements ProductoService {
     public List<Producto> consulta1(double precioInf, double precioSup) {
         return productoDao.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
     }
+    
+    @Override
+    @Transactional(readOnly=true)
+    public List<Producto> consulta2(int exisstenciasMin, int existenciasMax) {
+        return productoDao.findByExistenciasBetweenOrderByDescripcion(exisstenciasMin, existenciasMax);
+    }
 }
