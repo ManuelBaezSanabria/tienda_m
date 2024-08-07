@@ -30,7 +30,7 @@ public class Usuario implements Serializable {
     private boolean activo;
     
     @OneToMany
-    @JoinColumn(name="id_rol", updatable=false)
+    @JoinColumn(name="id_usuario", updatable=false)
     private List<Rol> roles;
     
 }
